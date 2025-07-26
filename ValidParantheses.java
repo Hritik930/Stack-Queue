@@ -22,6 +22,7 @@ public class Solution{
 
 
   ==== method 2 ====
+    
 public class Solution{
   public boolean isValid(String s){
     Map<Character, Character> map = Map.of('(',')','{','}','[',']');
