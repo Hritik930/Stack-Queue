@@ -20,6 +20,29 @@ public class Solution{
   }
 }
 
+=== Method 3 ====
+
+  public class Solution{
+  public boolean isValid(String s){
+    Stack<Character> stack = new Stack<>();
+      for(int ch : s.toCharArray()){
+      if(ch == '(' || ch == '{' || ch == '['){
+        stack.push(ch);
+      }else{
+        if(stack.isEmpty){
+          return false;
+        }
+        char top = stack.pop();
+        if((ch == ')' && top != '(') ||
+           (ch == '}' && top != '{') ||
+           (ch == ']' && top != '[') ){
+             return false;
+        }
+      }
+    }
+    return stack.isEmpty();
+  }
+}
 
   ==== method 2 ====
     
